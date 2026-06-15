@@ -1,4 +1,15 @@
 import request from "supertest";
+
+// Mock firebase before importing app
+jest.mock("../../src/config/firebase", () => ({
+  auth: {
+    verifyIdToken: jest.fn().mockRejectedValue(new Error("Invalid token")),
+    getUser: jest.fn(),
+    setCustomUserClaims: jest.fn(),
+  },
+  default: {},
+}));
+
 import app from "../src/app";
 
 describe("Loan API - No Auth", () => {
@@ -23,7 +34,9 @@ describe("Loan API - No Auth", () => {
   });
 
   it("POST /api/v1/loans without token returns 401", async () => {
-    const res = await request(app).post("/api/v1/loans").send({ applicant: "Test", amount: 1000 });
+    const res = await request(app)
+      .post("/api/v1/loans")
+      .send({ applicant: "Test", amount: 1000 });
     expect(res.status).toBe(401);
   });
 
