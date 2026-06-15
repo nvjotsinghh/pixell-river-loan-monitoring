@@ -1,4 +1,3 @@
-import { HTTP_STATUS } from "../../../constants/httpStatus";
 
 export class BaseError extends Error {
   public readonly statusCode: number;
