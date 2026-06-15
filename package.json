@@ -1,0 +1,21 @@
+{
+  "name": "pixell-river-loan-monitoring",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nvjotsinghh/pixell-river-loan-monitoring.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/nvjotsinghh/pixell-river-loan-monitoring/issues"
+  },
+  "homepage": "https://github.com/nvjotsinghh/pixell-river-loan-monitoring#readme"
+}
