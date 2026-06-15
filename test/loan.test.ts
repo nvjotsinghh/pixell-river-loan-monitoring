@@ -1,7 +1,7 @@
 import request from "supertest";
 
 // Mock firebase before importing app
-jest.mock("../../src/config/firebase", () => ({
+jest.mock("../src/config/firebase", () => ({
   auth: {
     verifyIdToken: jest.fn().mockRejectedValue(new Error("Invalid token")),
     getUser: jest.fn(),
