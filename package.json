@@ -4,8 +4,12 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
+  "build": "tsc",
+  "start": "node dist/server.js",
+  "dev": "nodemon --watch src --exec ts-node src/server.ts",
+  "test": "jest --runInBand --forceExit",
+  "lint": "eslint src/**/*.ts"
+},
   "repository": {
     "type": "git",
     "url": "git+https://github.com/nvjotsinghh/pixell-river-loan-monitoring.git"
@@ -38,4 +42,5 @@
     "ts-node": "^10.9.2",
     "typescript": "^6.0.3"
   }
+  
 }
